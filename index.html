@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+      (function() {
+        try {
+          var _nativeFetch = window.fetch ? window.fetch.bind(window) : null;
+          var _currentFetch = _nativeFetch;
+          Object.defineProperty(window, 'fetch', {
+            get: function() {
+              return _currentFetch;
+            },
+            set: function(val) {
+              _currentFetch = val;
+            },
+            configurable: true,
+            enumerable: true
+          });
+        } catch (e) {
+          console.warn('Fetch descriptor initialization:', e);
+        }
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary SEO Metadata -->
+    <title>The Groove – Rare Books, Vinyl & Canonical Hogwarts Archive</title>
+    <meta name="description" content="Explore The Groove: an independent literary atelier featuring rare folio editions, vinyl pairings, canonical Hogwarts house archives, and bespoke bookplates." />
+    <meta name="keywords" content="The Groove, bookstore, rare books, vinyl pairings, Hogwarts houses, Gryffindor, Slytherin, Ravenclaw, Hufflepuff, canonical wands, ex-libris, bookplates, literature, matriculation scroll" />
+    <meta name="author" content="The Groove Press" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="canonical" href="https://ais-dev-tgci3ubwo7svvtghmtvmn5-77245158946.asia-east1.run.app/" />
+
+    <!-- OpenGraph Social Cards -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="The Groove" />
+    <meta property="og:title" content="The Groove – Rare Books, Vinyl & Canonical Hogwarts Archive" />
+    <meta property="og:description" content="Explore The Groove: an independent literary atelier featuring rare folio editions, vinyl pairings, canonical Hogwarts house archives, and bespoke bookplates." />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="https://ais-dev-tgci3ubwo7svvtghmtvmn5-77245158946.asia-east1.run.app/" />
+
+    <!-- Twitter / X Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@TheGroovePress" />
+    <meta name="twitter:title" content="The Groove – Rare Books, Vinyl & Canonical Hogwarts Archive" />
+    <meta name="twitter:description" content="Explore The Groove: an independent literary atelier featuring rare folio editions, vinyl pairings, canonical Hogwarts house archives, and bespoke bookplates." />
+
+    <!-- Typography & Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Schema.org Structured Data (JSON-LD) for Rich Google Search Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BookStore",
+          "@id": "https://ais-dev-tgci3ubwo7svvtghmtvmn5-77245158946.asia-east1.run.app/#bookstore",
+          "name": "The Groove – Rare Books, Vinyl & Canonical Hogwarts Archive",
+          "description": "An independent literary atelier celebrating rare editions, vinyl pairings, bespoke ex-libris bookplates, and canonical Hogwarts house artifacts.",
+          "url": "https://ais-dev-tgci3ubwo7svvtghmtvmn5-77245158946.asia-east1.run.app/",
+          "currenciesAccepted": "USD",
+          "paymentAccepted": "Credit Card, House Points",
+          "priceRange": "$$",
+          "knowsAbout": ["Literature", "Rare Books", "Vinyl Records", "Hogwarts Houses", "Canonical Wands"],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "The Groove Folio Catalog",
+            "itemListElement": [
+              {
+                "@type": "OfferCatalog",
+                "name": "Hogwarts Canonical Wands Collection",
+                "description": "Authentic museum-grade replicas of canonical instruments from Ollivanders archives."
+              },
+              {
+                "@type": "OfferCatalog",
+                "name": "House Bookmarks & Matriculation Scrolls",
+                "description": "Custom embossed bookmarks in authentic house colors and official matriculation scrolls."
+              }
+            ]
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://ais-dev-tgci3ubwo7svvtghmtvmn5-77245158946.asia-east1.run.app/#website",
+          "url": "https://ais-dev-tgci3ubwo7svvtghmtvmn5-77245158946.asia-east1.run.app/",
+          "name": "The Groove",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://ais-dev-tgci3ubwo7svvtghmtvmn5-77245158946.asia-east1.run.app/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body class="bg-white text-[#16120F] antialiased selection:bg-[#16120F] selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

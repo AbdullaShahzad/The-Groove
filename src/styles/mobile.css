@@ -1,0 +1,198 @@
+/* ==========================================================================
+   THE GROOVE - DEDICATED MOBILE VIEWPORT OPTIMIZATIONS
+   Ensures flawless responsiveness, zero horizontal overflow, tactile touch
+   targets (>=44px), and silky smooth open/close navigation animations.
+   ========================================================================== */
+
+/* Keyframe animations for Mobile Navigation Drawer */
+@keyframes mobileDrawerSlide {
+  0% {
+    transform: translateY(-16px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes backdropFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-mobileDrawerSlide {
+  animation: mobileDrawerSlide 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-backdropFadeIn {
+  animation: backdropFadeIn 0.22s ease-out forwards;
+}
+
+/* Base utility for mobile touch momentum and hidden scrollbars */
+.scrollbar-none::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.scrollbar-none {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+/* ==========================================================================
+   TABLET & MOBILE VIEWPORTS (<= 1024px and <= 768px)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  /* Enforce clean header height */
+  header {
+    width: 100% !important;
+    max-width: 100vw !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* 1. Global Viewport & Container Reset */
+  html, body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* Prevent text from clipping horizontally */
+  h1, h2, h3, h4, p, span, div {
+    overflow-wrap: break-word;
+  }
+
+  /* Typography scale on mobile */
+  h1 {
+    font-size: clamp(1.75rem, 5vw, 2.5rem) !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.02em !important;
+  }
+
+  h2 {
+    font-size: clamp(1.4rem, 4.2vw, 2rem) !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.01em !important;
+  }
+
+  h3 {
+    font-size: clamp(1.15rem, 3.5vw, 1.6rem) !important;
+    line-height: 1.25 !important;
+  }
+
+  /* 2. Interactive Touch Target Optimization */
+  button, a {
+    touch-action: manipulation;
+  }
+
+  /* 3. Section Containers Safe Horizontal Padding */
+  section {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  section > div {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+
+  /* 4. Featured Edition Mobile Layout */
+  .featured-actions-container {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    width: 100% !important;
+  }
+
+  .featured-actions-container button {
+    width: 100% !important;
+    min-height: 44px !important;
+    justify-content: center !important;
+  }
+
+  /* 5. Custom Bookmark & Matriculation Studio */
+  .studio-grid-container {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .bookmark-preview-wrapper {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+  }
+
+  /* 6. Wand Collection Touch Improvements */
+  .wand-catalogue-rail {
+    padding-bottom: 6px !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .wand-catalogue-rail button {
+    min-height: 42px !important;
+    padding: 8px 14px !important;
+    font-size: 11px !important;
+  }
+
+  /* 7. Curator's Index Filter Chips */
+  .curator-filter-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px !important;
+  }
+
+  .curator-filter-btn {
+    min-height: 40px !important;
+    padding: 8px 14px !important;
+    font-size: 11px !important;
+  }
+
+  /* 8. Modals & Drawers on Mobile */
+  .mobile-modal-content {
+    max-height: 90vh !important;
+    overflow-y: auto !important;
+    margin: 10px !important;
+    padding: 16px 14px !important;
+    width: calc(100vw - 20px) !important;
+  }
+}
+
+/* ==========================================================================
+   EXTRA SMALL MOBILE SCREENS (<= 480px)
+   ========================================================================== */
+@media (max-width: 480px) {
+  /* Compact brand logo */
+  header .font-serif.text-lg {
+    font-size: 1.15rem !important;
+    letter-spacing: 0.12em !important;
+  }
+
+  /* Full-width action buttons */
+  .mobile-full-width-btn {
+    width: 100% !important;
+    min-height: 44px !important;
+  }
+
+  /* Scaling large preview SVG certificates */
+  .matriculation-scroll-container svg {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Spine Shelf touch buffer */
+  .spine-shelf-container {
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+    -webkit-overflow-scrolling: touch;
+  }
+}

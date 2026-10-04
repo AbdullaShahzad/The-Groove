@@ -1,0 +1,6 @@
+{
+  "name": "The Groove - Online Bookstore",
+  "description": "An online bookstore celebrating contemporary literature, vinyl pairings, classic fiction, and independent voices.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
